@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHive - Question 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="question-container">
+        <h2>Question 6</h2>
+        <p>Sara is known for helping players cook in which game series?</p>
+        <img src="sara.jpg" class="question-hint" style="max-width: 200px; margin: 16px 0;">
+        <form id="quiz-form">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q6" value="Sara’s Kitchen" />
+                        <span class="radio-mark"></span>
+                        Sara’s Kitchen
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q6" value="Bake with Sara" />
+                        <span class="radio-mark"></span>
+                        Bake with Sara
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q6" value="Cooking with Sara" />
+                        <span class="radio-mark"></span>
+                        Cooking with Sara
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q6" value="Sara’s Cooking Class" />
+                        <span class="radio-mark"></span>
+                        Sara’s Cooking Class
+
+                    </label>
+                </li>
+            </ul>
+            <div class="button-row">
+                <a href="q7.html"><button type="button" class="quiz-btn">Skip</button></a>
+                <button type="submit" id="next-btn" class="quiz-btn">Next</button>
+            </div>
+            <div id="mark"></div>
+        </form>
+    </div>
+    <script>
+        window.quizConfig = {
+            correctAnswer: "Sara’s Cooking Class",
+            nextPage: "q7.html",
+            questionName: "q6"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

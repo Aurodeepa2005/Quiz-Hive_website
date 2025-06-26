@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHive - Question 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="question-container">
+        <h2>Question 10</h2>
+        <p>In Pokemon GO, what do you use to catch a Pokémon?</p>
+        <img src="pokemon.png" class="question-hint" style="max-width: 200px; margin: 16px 0;">
+
+        <form id="quiz-form">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q10" value="Pokéball" />
+                        <span class="radio-mark"></span>
+                        Pokéball
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q10" value="Pokéwatch" />
+                        <span class="radio-mark"></span>
+                        Pokéwatch
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q10" value="Pokéstick" />
+                        <span class="radio-mark"></span>
+                        Pokéstick
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q10" value="Pokédisc" />
+                        <span class="radio-mark"></span>
+                        Pokédisc
+
+                    </label>
+                </li>
+            </ul>
+            <div class="button-row">
+                <a href="result.html"><button type="button" class="quiz-btn">Skip</button></a>
+                <button type="submit" id="next-btn" class="quiz-btn">Submit</button>
+            </div>
+            <div id="mark"></div>
+        </form>
+    </div>
+    <script>
+        window.quizConfig = {
+            correctAnswer: "Pokéball",
+            nextPage: "result.html",
+            questionName: "q10"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

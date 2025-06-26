@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHive - Question 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="question-container">
+        <h2>Question 2</h2>
+        <p>Which game features this character?</p>
+        <img src="mario.jpg" class="question-hint" style="max-width: 200px; margin: 16px 0;">
+        <form id="quiz-form">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q2" value="Sonic the Hedgehog" />
+                        <span class="radio-mark"></span>
+                        Sonic the Hedgehog
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q2" value="Super Mario" />
+                        <span class="radio-mark"></span>
+                        Super Mario
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q2" value="Zelda" />
+                        <span class="radio-mark"></span>
+                        Zelda
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q2" value="Donkey Kong" />
+                        <span class="radio-mark"></span>
+                        Donkey Kong
+                    </label>
+                </li>
+            </ul>
+            <div class="button-row">
+                <a href="q3.html"><button type="button" class="quiz-btn">Skip</button></a>
+                <button type="submit" id="next-btn" class="quiz-btn">Next</button>
+            </div>
+            <div id="mark"></div>
+        </form>
+    </div>
+    <script>
+        window.quizConfig = {
+            correctAnswer: "Super Mario",
+            nextPage: "q3.html",
+            questionName: "q2"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

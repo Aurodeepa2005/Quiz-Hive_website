@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHive - Question 8</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="question-container">
+        <h2>Question 8</h2>
+        <p>Which of these is NOT a real game?</p>
+
+        <form id="quiz-form">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q8" value="Cut the Rope" />
+                        <span class="radio-mark"></span>
+                        Cut the Rope
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q8" value="Doodle Jump" />
+                        <span class="radio-mark"></span>
+                        Doodle Jump
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q8" value="Jetpack Joyride" />
+                        <span class="radio-mark"></span>
+                        Jetpack Joyride
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q8" value="Run Mario Run" />
+                        <span class="radio-mark"></span>
+                        Run Mario Run
+
+                    </label>
+                </li>
+            </ul>
+            <div class="button-row">
+                <a href="q9.html"><button type="button" class="quiz-btn">Skip</button></a>
+                <button type="submit" id="next-btn" class="quiz-btn">Next</button>
+            </div>
+            <div id="mark"></div>
+        </form>
+    </div>
+    <script>
+        window.quizConfig = {
+            correctAnswer: "Run Mario Run",
+            nextPage: "q9.html",
+            questionName: "q8"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

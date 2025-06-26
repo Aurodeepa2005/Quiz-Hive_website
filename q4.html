@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHive - Question 4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="question-container">
+        <h2>Question 4</h2>
+        <p>In Among Us, who is the impostor?</p>
+        <img src="amongus.jpg" class="question-hint" style="max-width: 200px; margin: 16px 0;">
+        <form id="quiz-form">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q4" value="The player who completes tasks" />
+                        <span class="radio-mark"></span>
+                        The player who completes tasks
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q4" value="The player who fixes lights" />
+                        <span class="radio-mark"></span>
+                        The player who fixes lights
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q4" value="The player who kills and sabotages" />
+                        <span class="radio-mark"></span>
+                        The player who kills and sabotages
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q4" value="There is no impostor" />
+                        <span class="radio-mark"></span>
+                        There is no impostor
+
+                    </label>
+                </li>
+            </ul>
+            <div class="button-row">
+                <a href="q5.html"><button type="button" class="quiz-btn">Skip</button></a>
+                <button type="submit" id="next-btn" class="quiz-btn">Next</button>
+            </div>
+            <div id="mark"></div>
+        </form>
+    </div>
+    <script>
+        window.quizConfig = {
+            correctAnswer: "The player who kills and sabotages",        // correct ans is stored
+            nextPage: "q5.html",           // next page after this question
+            questionName: "q4"             // Current question
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

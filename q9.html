@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHive - Question 9</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="question-container">
+        <h2>Question 9</h2>
+        <p>In Candy Crush, what happens when you match 5 candies in a row?</p>
+        <img src="candycrush.jpg" class="question-hint" style="max-width: 200px; margin: 16px 0;">
+
+        <form id="quiz-form">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q9" value="Candy bomb" />
+                        <span class="radio-mark"></span>
+                        Candy bomb
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q9" value="Color bomb" />
+                        <span class="radio-mark"></span>
+                        Color bomb
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q9" value="Extra turn" />
+                        <span class="radio-mark"></span>
+                        Extra turn
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q9" value="Rainbow candy" />
+                        <span class="radio-mark"></span>
+                        Rainbow candy
+
+                    </label>
+                </li>
+            </ul>
+            <div class="button-row">
+                <a href="q10.html"><button type="button" class="quiz-btn">Skip</button></a>
+                <button type="submit" id="next-btn" class="quiz-btn">Next</button>
+            </div>
+            <div id="mark"></div>
+        </form>
+    </div>
+    <script>
+        window.quizConfig = {
+            correctAnswer: "Color bomb",
+            nextPage: "q10.html",
+            questionName: "q9"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

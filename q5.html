@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHive - Question 5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="question-container">
+        <h2>Question 5</h2>
+        <p>Which game features a restaurant where you make sundaes for customers?</p>
+        <img src="papalouie.png" class="question-hint" style="max-width: 200px; margin: 16px 0;">
+        <form id="quiz-form">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q5" value="Dinner Dash" />
+                        <span class="radio-mark"></span>
+                        Dinner Dash
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q5" value="Papa’s Freezeria" />
+                        <span class="radio-mark"></span>
+                        Papa’s Freezeria
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q5" value="Cooking Fever" />
+                        <span class="radio-mark"></span>
+                        Cooking Fever
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input type="radio" name="q5" value="Burger Shop" />
+                        <span class="radio-mark"></span>
+                        Burger Shop
+
+                    </label>
+                </li>
+            </ul>
+            <div class="button-row">
+                <a href="q6.html"><button type="button" class="quiz-btn">Skip</button></a>
+                <button type="submit" id="next-btn" class="quiz-btn">Next</button>
+            </div>
+            <div id="mark"></div>
+        </form>
+    </div>
+    <script>
+        window.quizConfig = {
+            correctAnswer: "Papa’s Freezeria",
+            nextPage: "q6.html",
+            questionName: "q5"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

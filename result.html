@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="result-container">
+        <h2>Correct Attempts: <span id="correct-attempts">0</span></h2>
+        <h2>Incorrect Attempts: <span id="incorrect-attempts">0</span></h2>
+        <h2>Your Final Score:</h2>
+        <div id="final-score" class="result-score">0</div>
+        <button class="reset-btn" onclick="resetQuiz()">Restart Quiz</button>
+
+    </div>
+    <script>
+        // Show the score and attempts from localStorage
+        document.getElementById('final-score').textContent = localStorage.getItem('quizScore') || 0;
+        document.getElementById('correct-attempts').textContent = localStorage.getItem('quizCorrect') || 0;
+        document.getElementById('incorrect-attempts').textContent = localStorage.getItem('quizIncorrect') || 0;
+
+        function resetQuiz() {
+            // Set all values to 0 for restart button.....
+            localStorage.setItem('quizScore', 0);
+            localStorage.setItem('quizCorrect', 0);
+            localStorage.setItem('quizIncorrect', 0);
+            // Optionally, clear attempted flags for all questions (q1_attempted, q2_attempted, ...)
+            // If you have 10 questions:
+            for (let i = 1; i <= 10; i++) {
+                localStorage.removeItem('q' + i + '_attempted');
+            }
+            window.location.href = "index.html";
+        }
+
+        // Preventing back navigation to reattempt
+        history.pushState(null, document.title, location.href);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, document.title, location.href);
+        });
+    </script>
+</body>
+
+</html>
